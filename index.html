@@ -60,7 +60,7 @@ button:hover {
 <script>
    function calcular() {
   const expr = document.getElementById("expression").value;
-  fetch(`https://calculadora-polonesa-backend.onrender.com=${encodeURIComponent(expr)}`)
+  fetch(`https://calculadora-polonesa-backend.onrender.com/v2?expression=${encodeURIComponent(expr)}`)
     .then(response => {
       if (!response.ok) throw new Error("Erro ao calcular.");
       return response.text();
